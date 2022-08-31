@@ -1,0 +1,22 @@
+dependencyAnalysis {
+    issues {
+        onUnusedDependencies {
+            severity('ignore')
+        }
+        onUsedTransitiveDependencies {
+            severity('ignore')
+        }
+        onIncorrectConfiguration {
+            severity('ignore')
+        }
+        onUnusedAnnotationProcessors {
+            severity('fail')
+            exclude('com.google.dagger:hilt-android-compiler')
+        }
+        onRedundantPlugins {
+            severity('fail')
+        }
+
+        ignoreKtx(true)
+    }
+}
